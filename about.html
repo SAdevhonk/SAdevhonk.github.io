@@ -1,137 +1,57 @@
-/* ===== Base ===== */
-:root{
-  --accent:#1f7a4d;      /* green accent */
-  --text:#111827;        /* near-black */
-  --muted:#6b7280;       /* gray */
-  --bg:#ffffff;
-  --border:#e5e7eb;      /* light gray */
-  --activebg:#1f7a4d;    /* active tab bg */
-}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About | Ageel Alramadhan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-*{ box-sizing:border-box; }
+<body>
+  <!-- Top Nav -->
+  <header class="nav">
+    <div class="container">
+      <a class="brand" href="index.html">Ageel</a>
 
-body{
-  margin:0;
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
-  color:var(--text);
-  background:var(--bg);
-  line-height:1.6;
-}
+      <nav class="navlinks">
+        <a href="index.html">Home</a>
+        <a class="active" href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+        <a href="Ageel-Alramadhan-Resume.pdf" target="_blank" rel="noopener">Resume</a>
+      </nav>
+    </div>
+  </header>
 
-/* ===== Layout ===== */
-.container{
-  max-width:920px;
-  margin:0 auto;
-  padding:40px 20px;
-}
+  <!-- Page Content -->
+  <main class="container">
+    <section class="card">
+      <h1>About Me</h1>
 
-.card{
-  border:1px solid var(--border);
-  border-radius:14px;
-  padding:18px;
-  background:#fff;
-}
+      <p>
+        Hi, I’m Ageel. I’m a Data Analyst with a background in performance marketing.
+        I transitioned into data analytics because I enjoy investigating why performance changes,
+        validating assumptions, and turning messy metrics into clear, decision-ready insights.
+      </p>
 
-/* ===== Top Nav Bar ===== */
-.nav{
-  border-bottom:1px solid var(--border);
-  background:#fff;
-}
+      <p>
+        My work combines structured analysis with business context—especially around growth,
+        customer behavior, and KPI movement. I focus on understanding patterns in data and
+        translating them into practical, measurable recommendations.
+      </p>
 
-.nav .container{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:16px;
-  padding-top:14px;
-  padding-bottom:14px;
-}
+      <h3>Core Tools</h3>
+      <ul>
+        <li>Python</li>
+        <li>SQL</li>
+        <li>Excel</li>
+        <li>Data Visualization</li>
+      </ul>
 
-.brand{
-  font-weight:800;
-  letter-spacing:0.2px;
-  color:var(--text);
-  text-decoration:none;
-}
-
-.navlinks{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-}
-
-/* Normal tab */
-.navlinks a{
-  text-decoration:none;
-  color:var(--text);
-  font-weight:600;
-  font-size:14px;
-  padding:8px 12px;
-  border-radius:10px;
-}
-
-/* Hover tab */
-.navlinks a:hover{
-  background:#f3f4f6;
-}
-
-/* Active tab (THIS is what you want) */
-.navlinks a.active{
-  background:var(--activebg);
-  color:#ffffff;
-}
-
-/* ===== Typography ===== */
-h1{
-  margin:0 0 8px 0;
-  font-size:36px;
-  line-height:1.2;
-}
-
-h2{
-  margin:0 0 20px 0;
-  font-size:18px;
-  color:var(--muted);
-  font-weight:600;
-}
-
-h3{
-  margin:24px 0 10px 0;
-  font-size:18px;
-}
-
-p{
-  margin:0 0 16px 0;
-  max-width:650px;
-}
-
-.small{
-  font-size:14px;
-  color:var(--muted);
-}
-
-/* ===== Links ===== */
-a{
-  color:var(--accent);
-}
-
-/* ===== Button Style (used on homepage / projects) ===== */
-.button{
-  display:inline-block;
-  background:var(--accent);
-  color:#fff;
-  text-decoration:none;
-  font-weight:600;
-  padding:12px 20px;
-  border-radius:8px;
-  margin-top:10px;
-}
-
-.button:hover{
-  opacity:0.9;
-}
-
-/* ===== Responsive ===== */
-@media (max-width:640px){
-  h1{ font-size:28px; }
-}
+      <p class="small">
+        Want to see this in action? <a href="projects.html">View my projects</a>.
+      </p>
+    </section>
+  </main>
+</body>
+</html>
