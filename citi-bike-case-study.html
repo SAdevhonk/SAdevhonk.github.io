@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NYC Citi Bike Dashboard | Ageel Alramadhan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Top Nav -->
+  <header class="nav">
+    <div class="container">
+      <a class="brand" href="index.html">Ageel</a>
+
+      <nav class="navlinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a class="active" href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+        <a href="Ageel-Alramadhan-Resume.pdf" target="_blank" rel="noopener">Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <main class="container">
+    <section class="card">
+
+      <h1>NYC Citi Bike Dashboard (2022)</h1>
+
+      <h3>Project Overview</h3>
+      <p>
+      This project analyzes Citi Bike usage patterns in New York City during 2022 
+      to support operational decision-making around bike supply, rebalancing, and 
+      seasonal demand planning. The goal was to translate trip-level data into 
+      actionable operational recommendations.
+      </p>
+
+      <h3>Business Problem</h3>
+      <p>
+      Citi Bike demand fluctuates by location, time of day, and season. 
+      The key objective was identifying high-demand stations, understanding 
+      seasonal usage patterns, and determining how supply operations should 
+      adapt to reduce empty docks and unavailable bikes.
+      </p>
+
+      <h3>Data</h3>
+      <p>
+      The dataset included Citi Bike trip data for 2022 and corresponding 
+      weather data for seasonal comparison. Analysis was performed using 
+      Python (Pandas, NumPy) with visualizations built for an interactive 
+      Streamlit dashboard.
+      </p>
+
+      <h3>Process</h3>
+      <ul>
+        <li>Cleaned and validated trip data (dates, station names, ride durations)</li>
+        <li>Aggregated trips by station, day, and month</li>
+        <li>Merged daily trip counts with temperature data</li>
+        <li>Ranked top 10 highest-demand stations</li>
+        <li>Built interactive dashboard views (stations, seasonality, maps, recommendations)</li>
+      </ul>
+
+      <h3>Key Insights</h3>
+      <ul>
+        <li>Demand is heavily concentrated in central Manhattan stations</li>
+        <li>Trips increase significantly during warmer months and decline sharply in winter</li>
+        <li>Peak demand occurs during predictable daily commuting windows</li>
+        <li>Winter demand averages roughly half of summer demand levels</li>
+      </ul>
+
+      <h3>Recommendations</h3>
+      <ul>
+        <li>Increase rebalancing frequency at high-demand Manhattan stations</li>
+        <li>Scale staffing and operations seasonally (summer vs winter)</li>
+        <li>Implement targeted early-morning and mid-day rebalancing cycles</li>
+        <li>Use spatial hotspot data to evaluate expansion corridors</li>
+      </ul>
+
+      <h3>Conclusion</h3>
+      <p>
+      This analysis demonstrates how time-series trends, spatial clustering, 
+      and demand concentration can guide operational efficiency in mobility 
+      systems. By aligning supply decisions with observed demand patterns, 
+      Citi Bike can improve reliability and optimize resource allocation.
+      </p>
+
+    </section>
+  </main>
+</body>
+</html>
