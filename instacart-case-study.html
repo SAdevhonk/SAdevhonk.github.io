@@ -1,163 +1,174 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Instacart Market Basket Analysis | Ageel Alramadhan</title>
-  <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Instacart Market Basket Analysis | Ageel Alramadhan</title>
+    <link rel="stylesheet" href="style.css" />
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FV6Q6EKYZ1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-FV6Q6EKYZ1');
-  </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FV6Q6EKYZ1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-FV6Q6EKYZ1");
+    </script>
 
-  <!-- Page-only chart styling -->
-  <style>
-    .case-image{
-      display:block;
-      width:100%;
-      max-width:600px;
-      height:auto;
-      margin:10px auto 6px auto;
-      border:1px solid var(--border);
-      border-radius:10px;
-      background:#fff;
-    }
-    figure.case-figure{ margin: 10px 0 18px 0; }
-    figure.case-figure figcaption{
-      font-size:13px;
-      color:var(--muted);
-      margin-top:6px;
-      max-width:860px;
-    }
-    .insight-block{
-      margin-top: 18px;
-      padding-top: 16px;
-      border-top: 1px solid var(--border);
-    }
-    .insight-block h2{
-      font-size:18px;
-      margin:18px 0 8px 0;
-    }
-  </style>
-</head>
+    <!-- Page-only chart styling -->
+    <style>
+      .case-image {
+        display: block;
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        margin: 10px auto 6px auto;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        background: #fff;
+      }
 
-<body>
-  <!-- Top Nav -->
-  <header class="nav">
-    <div class="container">
-      <a class="brand" href="index.html">Ageel</a>
+      figure.case-figure {
+        margin: 10px 0 18px 0;
+      }
 
-      <nav class="navlinks">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a class="active" href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-        <a href="Ageel-Alramadhan-Resume.pdf" target="_blank" rel="noopener">Resume</a>
-      </nav>
-    </div>
-  </header>
+      figure.case-figure figcaption {
+        font-size: 13px;
+        color: var(--muted);
+        margin-top: 6px;
+        max-width: 860px;
+      }
 
-  <!-- Page Content -->
-  <main class="container">
+      .insight-block {
+        margin-top: 18px;
+        padding-top: 16px;
+        border-top: 1px solid var(--border);
+      }
 
-    <div class="project-switcher">
-      <span class="switcher-link is-active" aria-current="page">Instacart</span>
-      <a class="switcher-link" href="citi-bike-case-study.html">Citi Bike</a>
-      <a class="switcher-link" href="rockbuster-case-study.html">Rockbuster</a>
-    </div>
+      .insight-block h2 {
+        font-size: 18px;
+        margin: 18px 0 8px 0;
+      }
+    </style>
+  </head>
 
-    <section class="card">
+  <body>
+    <!-- Top Nav -->
+    <header class="nav">
+      <div class="container">
+        <a class="brand" href="index.html">Ageel</a>
 
-      <h1>Instacart Market Basket Analysis</h1>
-      <p class="small">
-        Python • Pandas/NumPy • Behavioral segmentation • Reorder analysis
-      </p>
+        <nav class="navlinks">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a class="active" href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+          <a
+            href="Ageel-Alramadhan-Resume.pdf"
+            target="_blank"
+            rel="noopener"
+            onclick="gtag('event','resume_click',{event_category:'navigation',event_label:'resume_nav'});"
+          >
+            Resume
+          </a>
+        </nav>
+      </div>
+    </header>
 
-      <h3>Project Overview</h3>
-      <p>
-        This project analyzes Instacart customer purchasing behavior to uncover patterns
-        in ordering frequency, product popularity, and customer segmentation.
-        The goal was to translate transaction-level data into actionable business insights.
-      </p>
-
-      <h3>Problem</h3>
-      <p>
-        Instacart sought to better understand customer purchasing behavior in order to
-        improve targeted marketing strategies, optimize product placement,
-        and increase repeat purchase rates.
-        The objective was identifying which behavioral patterns drive long-term retention and value.
-      </p>
-
-      <h3>Data</h3>
-      <p>
-        The dataset included transactional order data, product information,
-        department categories, and customer-level metrics.
-        Analysis was performed using Python (Pandas, NumPy, Matplotlib)
-        to structure and explore large-scale purchase behavior.
-      </p>
-
-      <h3>Process</h3>
-      <ul>
-        <li>Cleaned and validated transactional datasets</li>
-        <li>Analyzed order frequency distribution</li>
-        <li>Examined reorder patterns across departments</li>
-        <li>Segmented customers by behavioral frequency</li>
-        <li>Identified time-based ordering patterns</li>
-      </ul>
-
-      <h3>Key Insights</h3>
-      <ul>
-        <li>High-frequency customers account for a disproportionate share of total orders</li>
-        <li>Ordering activity is concentrated during predictable daily windows</li>
-        <li>Reorder probability increases with customer tenure and repeat purchases</li>
-        <li>Revenue is structurally tied to repeat behavior rather than customer volume alone</li>
-      </ul>
-
-      <!-- Visual Evidence -->
-      <div class="insight-block">
-
-        <h2>1) Order Frequency Drives Disproportionate Value</h2>
-        <figure class="case-figure">
-          <img
-            src="instacart-order-frequency.png"
-            alt="Customers by Order Frequency"
-            class="case-image"
-          />
-          <figcaption>
-            A relatively small group of high-frequency customers generates the majority of orders,
-            highlighting the importance of retention and loyalty-focused strategies.
-          </figcaption>
-        </figure>
-
-        <h2>2) Ordering Activity is Time-Concentrated</h2>
-        <figure class="case-figure">
-          <img
-            src="instacart-orders-by-hour.png"
-            alt="Orders by Hour of Day"
-            class="case-image"
-          />
-          <figcaption>
-            Orders peak between late morning and early evening, indicating predictable
-            daily demand cycles that can inform staffing and promotion timing.
-          </figcaption>
-        </figure>
-
+    <!-- Page Content -->
+    <main class="container">
+      <div class="project-switcher">
+        <span class="switcher-link is-active" aria-current="page">Instacart</span>
+        <a class="switcher-link" href="citi-bike-case-study.html">Citi Bike</a>
+        <a class="switcher-link" href="rockbuster-case-study.html">Rockbuster</a>
       </div>
 
-      <h3>Conclusion</h3>
-      <p>
-        This analysis demonstrates that Instacart’s performance is driven by
-        concentrated behavioral segments rather than evenly distributed demand.
-        By prioritizing high-frequency customers and aligning operations with peak activity windows,
-        the company can improve retention, marketing efficiency, and customer lifetime value.
-      </p>
+      <section class="card">
+        <h1>Instacart Market Basket Analysis</h1>
+        <p class="small">
+          Python • Pandas/NumPy • Behavioral segmentation • Reorder analysis
+        </p>
 
-    </section>
-  </main>
-</body>
+        <h3>Project Overview</h3>
+        <p>
+          This project analyzes Instacart customer purchasing behavior to uncover
+          patterns in ordering frequency, product popularity, and customer segmentation.
+          The goal was to translate transaction-level data into actionable business insights.
+        </p>
+
+        <h3>Problem</h3>
+        <p>
+          Instacart sought to better understand customer purchasing behavior in order to
+          improve targeted marketing strategies, optimize product placement,
+          and increase repeat purchase rates. The objective was identifying which
+          behavioral patterns drive long-term retention and value.
+        </p>
+
+        <h3>Data</h3>
+        <p>
+          The dataset included transactional order data, product information,
+          department categories, and customer-level metrics. Analysis was performed
+          using Python (Pandas, NumPy, Matplotlib) to structure and explore
+          large-scale purchase behavior.
+        </p>
+
+        <h3>Process</h3>
+        <ul>
+          <li>Cleaned and validated transactional datasets</li>
+          <li>Analyzed order frequency distribution</li>
+          <li>Examined reorder patterns across departments</li>
+          <li>Segmented customers by behavioral frequency</li>
+          <li>Identified time-based ordering patterns</li>
+        </ul>
+
+        <h3>Key Insights</h3>
+        <ul>
+          <li>High-frequency customers account for a disproportionate share of total orders</li>
+          <li>Ordering activity is concentrated during predictable daily windows</li>
+          <li>Reorder probability increases with customer tenure and repeat purchases</li>
+          <li>Revenue is structurally tied to repeat behavior rather than customer volume alone</li>
+        </ul>
+
+        <div class="insight-block">
+          <h2>1) Order Frequency Drives Disproportionate Value</h2>
+          <figure class="case-figure">
+            <img
+              src="instacart-order-frequency.png"
+              alt="Customers by Order Frequency"
+              class="case-image"
+            />
+            <figcaption>
+              A relatively small group of high-frequency customers generates the
+              majority of orders, highlighting the importance of retention and
+              loyalty-focused strategies.
+            </figcaption>
+          </figure>
+
+          <h2>2) Ordering Activity is Time-Concentrated</h2>
+          <figure class="case-figure">
+            <img
+              src="instacart-orders-by-hour.png"
+              alt="Orders by Hour of Day"
+              class="case-image"
+            />
+            <figcaption>
+              Orders peak between late morning and early evening, indicating
+              predictable daily demand cycles that can inform staffing and promotion timing.
+            </figcaption>
+          </figure>
+        </div>
+
+        <h3>Conclusion</h3>
+        <p>
+          This analysis demonstrates that Instacart’s performance is driven by
+          concentrated behavioral segments rather than evenly distributed demand.
+          By prioritizing high-frequency customers and aligning operations with
+          peak activity windows, the company can improve retention, marketing
+          efficiency, and customer lifetime value.
+        </p>
+      </section>
+    </main>
+  </body>
 </html>
