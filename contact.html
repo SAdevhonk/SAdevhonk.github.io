@@ -4,7 +4,16 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact | Ageel Alramadhan</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FV6Q6EKYZ1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-FV6Q6EKYZ1");
+  </script>
 </head>
 
 <body>
@@ -28,22 +37,29 @@
     <section class="card">
       <h1>Contact</h1>
 
-      <p>
-        I’m open to Data Analyst opportunities and collaborations.
-      </p>
+      <p>I’m open to Data Analyst opportunities and collaborations.</p>
 
       <p>
-        <strong>Email:</strong><br>
-        <a href="mailto:akeeldsr@gmail.com">akeeldsr@gmail.com</a>
-      </p>
-
-      <p>
-        <strong>LinkedIn:</strong><br>
-        <a href="https://www.linkedin.com/in/ageel-alramadhan/" target="_blank" rel="noopener">
-          linkedin.com/in/ageel-alramadhan
+        <strong>Email:</strong><br />
+        <a
+          href="mailto:akeeldsr@gmail.com"
+          onclick="gtag('event','email_click',{event_category:'contact',event_label:'email'});"
+        >
+          akeeldsr@gmail.com
         </a>
       </p>
 
+      <p>
+        <strong>LinkedIn:</strong><br />
+        <a
+          href="https://www.linkedin.com/in/ageel-alramadhan/"
+          target="_blank"
+          rel="noopener"
+          onclick="gtag('event','linkedin_click',{event_category:'contact',event_label:'linkedin_profile'});"
+        >
+          linkedin.com/in/ageel-alramadhan
+        </a>
+      </p>
     </section>
   </main>
 </body>
