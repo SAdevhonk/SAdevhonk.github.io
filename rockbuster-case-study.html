@@ -1,147 +1,156 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Rockbuster Strategy Analysis (SQL) | Ageel Alramadhan</title>
-  <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rockbuster Strategy Analysis (SQL) | Ageel Alramadhan</title>
+    <link rel="stylesheet" href="style.css" />
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FV6Q6EKYZ1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-FV6Q6EKYZ1');
-  </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FV6Q6EKYZ1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-FV6Q6EKYZ1");
+    </script>
 
-  <!-- Match sizing used in other case studies -->
-  <style>
-    .case-image{
-      display:block;
-      width:100%;
-      max-width:600px;
-      height:auto;
-      margin:10px auto 6px auto;
-      border:1px solid var(--border);
-      border-radius:10px;
-      background:#fff;
-    }
-    figure.case-figure{
-      margin:12px auto 18px auto;
-      text-align:center;
-      max-width:620px;
-    }
-    figure.case-figure figcaption{
-      font-size:13px;
-      color:var(--muted);
-      margin-top:6px;
-    }
-  </style>
-</head>
+    <!-- Page-only chart styling (matches other case studies) -->
+    <style>
+      .case-image {
+        display: block;
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        margin: 10px auto 6px auto;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        background: #fff;
+      }
 
-<body>
-  <!-- Top Nav -->
-  <header class="nav">
-    <div class="container">
-      <a class="brand" href="index.html">Ageel</a>
+      figure.case-figure {
+        margin: 12px auto 18px auto;
+        text-align: center;
+        max-width: 620px;
+      }
 
-      <nav class="navlinks">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a class="active" href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-        <a href="Ageel-Alramadhan-Resume.pdf" target="_blank" rel="noopener">Resume</a>
+      figure.case-figure figcaption {
+        font-size: 13px;
+        color: var(--muted);
+        margin-top: 6px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Top Nav -->
+    <header class="nav">
+      <div class="container">
+        <a class="brand" href="index.html">Ageel</a>
+
+        <nav class="navlinks">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a class="active" href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+          <a
+            href="Ageel-Alramadhan-Resume.pdf"
+            target="_blank"
+            rel="noopener"
+            onclick="gtag('event','resume_click',{event_category:'navigation',event_label:'resume_nav'});"
+          >
+            Resume
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Page Content -->
+    <main class="container">
+      <nav class="project-switcher" aria-label="Project switcher">
+        <a class="switcher-link" href="instacart-case-study.html">Instacart</a>
+        <a class="switcher-link" href="citi-bike-case-study.html">Citi Bike</a>
+        <span class="switcher-link is-active" aria-current="page">Rockbuster</span>
       </nav>
-    </div>
-  </header>
 
-  <main class="container">
+      <section class="card">
+        <h1>Rockbuster Strategy Analysis (SQL)</h1>
+        <p class="small">SQL • Tableau • Revenue analysis • Market prioritization</p>
 
-    <nav class="project-switcher" aria-label="Project switcher">
-      <a class="switcher-link" href="instacart-case-study.html">Instacart</a>
-      <a class="switcher-link" href="citi-bike-case-study.html">Citi Bike</a>
-      <span class="switcher-link is-active" aria-current="page">Rockbuster</span>
-    </nav>
+        <h3>Project Overview</h3>
+        <p>
+          This project uses SQL to analyze Rockbuster’s rental database to identify revenue drivers,
+          customer distribution, and geographic opportunities. The goal was to generate insights
+          that could support a data-informed business strategy for growth and retention.
+        </p>
 
-    <section class="card">
+        <h3>Problem</h3>
+        <p>
+          Rockbuster needed a clearer picture of which films and customer segments generate the most revenue,
+          where demand is strongest, and how to prioritize markets.
+        </p>
 
-      <h1>Rockbuster Strategy Analysis (SQL)</h1>
-      <p class="small">
-        SQL • Tableau • Revenue analysis • Market prioritization
-      </p>
+        <h3>Data</h3>
+        <p>
+          The dataset includes customer data, rentals, payments, film information, inventory,
+          and geographic location fields. Analysis was completed using SQL queries and visualized in Tableau.
+        </p>
 
-      <h3>Project Overview</h3>
-      <p>
-        This project uses SQL to analyze Rockbuster’s rental database to identify revenue drivers,
-        customer distribution, and geographic opportunities. The goal was to generate insights
-        that could support a data-informed business strategy for growth and retention.
-      </p>
+        <h3>Process</h3>
+        <ul>
+          <li>Joined relational tables using SQL</li>
+          <li>Calculated revenue by customer, film, and geography</li>
+          <li>Identified revenue concentration patterns</li>
+          <li>Translated findings into business recommendations</li>
+        </ul>
 
-      <h3>Problem</h3>
-      <p>
-        Rockbuster needed a clearer picture of which films and customer segments generate the most revenue,
-        where demand is strongest, and how to prioritize markets.
-      </p>
+        <h3>Key Insights</h3>
+        <ul>
+          <li>Revenue is concentrated in a small subset of customers and locations</li>
+          <li>A limited number of markets drive a large share of total revenue</li>
+          <li>High-value customers are clustered geographically</li>
+        </ul>
 
-      <h3>Data</h3>
-      <p>
-        The dataset includes customer data, rentals, payments, film information, inventory,
-        and geographic location fields. Analysis was completed using SQL queries and visualized in Tableau.
-      </p>
+        <h3>Geographic Revenue Concentration</h3>
+        <figure class="case-figure">
+          <img
+            src="rockbuster-top-countries.png"
+            alt="Top countries by Rockbuster revenue"
+            class="case-image"
+          />
+          <figcaption>
+            Revenue clusters in a small number of countries, supporting focused market prioritization.
+          </figcaption>
+        </figure>
 
-      <h3>Process</h3>
-      <ul>
-        <li>Joined relational tables using SQL</li>
-        <li>Calculated revenue by customer, film, and geography</li>
-        <li>Identified revenue concentration patterns</li>
-        <li>Translated findings into business recommendations</li>
-      </ul>
+        <h3>Customer Revenue Concentration</h3>
+        <figure class="case-figure">
+          <img
+            src="rockbuster-top-customers.png"
+            alt="Top customers by Rockbuster revenue"
+            class="case-image"
+          />
+          <figcaption>
+            A small segment of customers contributes disproportionately to total revenue, indicating a strong
+            opportunity for retention-focused strategies.
+          </figcaption>
+        </figure>
 
-      <h3>Key Insights</h3>
-      <ul>
-        <li>Revenue is concentrated in a small subset of customers and locations</li>
-        <li>A limited number of markets drive a large share of total revenue</li>
-        <li>High-value customers are clustered geographically</li>
-      </ul>
+        <h3>Recommendations</h3>
+        <ul>
+          <li>Prioritize high-value customer retention campaigns</li>
+          <li>Focus investment on top-performing markets</li>
+          <li>Standardize recurring SQL reports for ongoing performance tracking</li>
+        </ul>
 
-      <h3>Geographic Revenue Concentration</h3>
-      <figure class="case-figure">
-        <img
-          src="rockbuster-top-countries.png"
-          alt="Top countries by Rockbuster revenue"
-          class="case-image">
-        <figcaption>
-          Revenue clusters in a small number of countries, supporting focused market prioritization.
-        </figcaption>
-      </figure>
-
-      <h3>Customer Revenue Concentration</h3>
-      <figure class="case-figure">
-        <img
-          src="rockbuster-top-customers.png"
-          alt="Top customers by Rockbuster revenue"
-          class="case-image">
-        <figcaption>
-          A small segment of customers contributes disproportionately to total revenue,
-          indicating strong opportunity for retention-focused strategies.
-        </figcaption>
-      </figure>
-
-      <h3>Recommendations</h3>
-      <ul>
-        <li>Prioritize high-value customer retention campaigns</li>
-        <li>Focus investment on top-performing markets</li>
-        <li>Standardize recurring SQL reports for ongoing performance tracking</li>
-      </ul>
-
-      <h3>Conclusion</h3>
-      <p>
-        This project demonstrates how SQL analysis and Tableau visualization can directly
-        inform strategic decision-making by identifying revenue concentration and growth opportunities.
-      </p>
-
-    </section>
-  </main>
-</body>
+        <h3>Conclusion</h3>
+        <p>
+          This project demonstrates how SQL analysis and Tableau visualization can directly inform strategic
+          decision-making by identifying revenue concentration and growth opportunities.
+        </p>
+      </section>
+    </main>
+  </body>
 </html>
