@@ -3,12 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Instacart Market Basket Analysis | Ageel Alramadhan</title>
-
+    <title>NYC Citi Bike Dashboard (2022) | Ageel Alramadhan</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="consent.css" />
 
-    <!-- Page-only chart styling (MATCHES Citi Bike for consistency) -->
+    <!-- Page-only styling for charts -->
     <style>
       .case-image {
         display: block;
@@ -73,126 +72,152 @@
     <main class="container">
       <!-- Project Switcher -->
       <div class="project-switcher">
-        <span class="switcher-link is-active" aria-current="page">Instacart</span>
-        <a class="switcher-link" href="citi-bike-case-study.html">Citi Bike</a>
+        <a class="switcher-link" href="instacart-case-study.html">Instacart</a>
+        <span class="switcher-link is-active" aria-current="page">Citi Bike</span>
         <a class="switcher-link" href="rockbuster-case-study.html">Rockbuster</a>
       </div>
 
       <section class="card">
-        <h1>Instacart Market Basket Analysis</h1>
+        <h1>NYC Citi Bike Dashboard (2022)</h1>
         <p class="small">
-          Python • Pandas/NumPy • Behavioral segmentation • Reorder analysis
+          Python • Pandas/NumPy • Data storytelling • Operational recommendations
         </p>
 
         <h3>Project Overview</h3>
         <p>
-          This project analyzes Instacart customer purchasing behavior to uncover
-          patterns in ordering frequency, product popularity, and customer segmentation.
-          The goal was to translate transaction-level data into actionable business insights.
+          This project analyzes Citi Bike usage patterns in New York City during 2022
+          to support operational decision-making around bike supply, rebalancing,
+          and seasonal demand planning. The goal was to translate trip-level data
+          into actionable operational recommendations.
         </p>
 
-        <h3>Problem</h3>
+        <h3>Business Problem</h3>
         <p>
-          Instacart sought to better understand customer purchasing behavior in order to
-          improve targeted marketing strategies, optimize product placement,
-          and increase repeat purchase rates. The objective was identifying which
-          behavioral patterns drive long-term retention and value.
+          Citi Bike demand fluctuates by location, time of day, and season.
+          The objective was identifying high-demand stations, understanding
+          seasonal usage patterns, and determining how operations should adapt
+          to reduce empty docks and unavailable bikes.
         </p>
 
         <h3>Data</h3>
         <p>
-          The dataset included transactional order data, product information,
-          department categories, and customer-level metrics. Analysis was performed
-          using Python (Pandas, NumPy, Matplotlib) to structure and explore
-          large-scale purchase behavior.
+          The dataset included Citi Bike trip data for 2022 and corresponding
+          weather data for seasonal comparison. Analysis was performed using
+          Python (Pandas, NumPy) with visualizations built for an interactive
+          Streamlit dashboard.
         </p>
 
         <h3>Process</h3>
         <ul>
-          <li>Cleaned and validated transactional datasets</li>
-          <li>Analyzed order frequency distribution</li>
-          <li>Examined reorder patterns across departments</li>
-          <li>Segmented customers by behavioral frequency</li>
-          <li>Identified time-based ordering patterns</li>
+          <li>Cleaned and validated trip data (dates, station names, ride durations)</li>
+          <li>Aggregated trips by station, day, and month</li>
+          <li>Merged daily trip counts with temperature data</li>
+          <li>Ranked top 10 highest-demand stations</li>
+          <li>Built dashboard views (stations, seasonality, maps, recommendations)</li>
         </ul>
 
         <h3>Key Insights</h3>
         <ul>
-          <li>High-frequency customers account for a disproportionate share of total orders</li>
-          <li>Ordering activity is concentrated during predictable daily windows</li>
-          <li>Reorder probability increases with customer tenure and repeat purchases</li>
-          <li>Revenue is structurally tied to repeat behavior rather than customer volume alone</li>
+          <li>Demand is heavily concentrated in central Manhattan stations</li>
+          <li>Trips increase significantly during warmer months and decline sharply in winter</li>
+          <li>Peak demand aligns with predictable commuting windows</li>
+          <li>Winter demand averages roughly half of summer demand levels</li>
         </ul>
 
         <div class="insight-block">
-          <h2>1) Order Frequency Drives Disproportionate Value</h2>
+          <h2>Visual Evidence</h2>
+          <p class="small">
+            A few key charts from the dashboard that support the insights above.
+          </p>
+
+          <h2>1) Seasonality drives demand</h2>
           <figure class="case-figure">
             <img
-              src="instacart-order-frequency.png"
-              alt="Customers by Order Frequency"
+              src="citi-monthly-trends.png"
+              alt="Average daily Citi Bike rides per month (2022)"
               class="case-image"
             />
             <figcaption>
-              A relatively small group of high-frequency customers generates the
-              majority of orders, highlighting the importance of retention and
-              loyalty-focused strategies.
+              Ridership peaks in summer and drops sharply in winter, supporting
+              seasonal staffing and fleet allocation decisions.
             </figcaption>
           </figure>
 
-          <h2>2) Ordering Activity is Time-Concentrated</h2>
+          <h2>2) Temperature strongly influences ridership</h2>
           <figure class="case-figure">
             <img
-              src="instacart-orders-by-hour.png"
-              alt="Orders by Hour of Day"
+              src="citi-trip-vs-temp.png"
+              alt="Daily Citi Bike trips vs average temperature (2022)"
               class="case-image"
             />
             <figcaption>
-              Orders peak between late morning and early evening, indicating
-              predictable daily demand cycles that can inform staffing and promotion timing.
+              Trips rise with warmer temperatures, supporting weather-aware
+              planning for capacity and rebalancing.
+            </figcaption>
+          </figure>
+
+          <h2>3) Highest-demand stations are concentrated in Manhattan</h2>
+          <figure class="case-figure">
+            <img
+              src="popular-stations-citibike.png"
+              alt="Top Citi Bike start stations (2022)"
+              class="case-image"
+            />
+            <figcaption>
+              Highest-demand stations cluster in central Manhattan, indicating
+              where more frequent rebalancing and higher dock capacity can reduce shortages.
             </figcaption>
           </figure>
         </div>
 
+        <h3>Recommendations</h3>
+        <ul>
+          <li>Increase rebalancing frequency at high-demand Manhattan stations</li>
+          <li>Scale staffing and operations seasonally (summer vs winter)</li>
+          <li>Implement targeted early-morning and mid-day rebalancing cycles</li>
+          <li>Use spatial hotspot data to evaluate expansion corridors</li>
+        </ul>
+
         <h3>Conclusion</h3>
         <p>
-          This analysis demonstrates that Instacart’s performance is driven by
-          concentrated behavioral segments rather than evenly distributed demand.
-          By prioritizing high-frequency customers and aligning operations with
-          peak activity windows, the company can improve retention, marketing
-          efficiency, and customer lifetime value.
+          This analysis demonstrates how time-series trends, spatial clustering,
+          and demand concentration can guide operational efficiency in mobility
+          systems. By aligning supply decisions with observed demand patterns,
+          Citi Bike can improve reliability and optimize resource allocation.
         </p>
       </section>
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
-      <div class="footer-inner">
-        <div class="footer-left">
-          <a href="impressum.html">Impressum</a>
-          <span class="separator">|</span>
-          <a href="datenschutz.html">Datenschutzerklärung</a>
-        </div>
-
-        <div class="footer-right">
-          © 2026 Ageel Alramadhan
-        </div>
-      </div>
-    </footer>
-
-    <!-- Cookie Banner -->
-    <div id="cookie-banner" class="cookie-banner" style="display:none;">
-      <div class="cookie-inner">
-        <p>
-          Diese Website verwendet Google Analytics, um die Nutzung zu analysieren.
-          Sie können zustimmen oder ablehnen.
-        </p>
-        <div class="cookie-actions">
-          <button class="cookie-btn" data-cookie-reject>Ablehnen</button>
-          <button class="cookie-btn primary" data-cookie-accept>Akzeptieren</button>
-        </div>
-      </div>
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <a href="impressum.html">Impressum</a>
+      <span class="separator">|</span>
+      <a href="datenschutz.html">Datenschutzerklärung</a>
     </div>
 
-    <script src="consent.js"></script>
+    <div class="footer-right">
+      © 2026 Ageel Alramadhan
+    </div>
+  </div>
+</footer>
+
+    <!-- Cookie Banner -->
+<div id="cookie-banner" class="cookie-banner" style="display:none;">
+  <div class="cookie-inner">
+    <p>
+      Diese Website verwendet Google Analytics, um die Nutzung zu analysieren.
+      Sie können zustimmen oder ablehnen.
+    </p>
+    <div class="cookie-actions">
+      <button class="cookie-btn" data-cookie-reject>Ablehnen</button>
+      <button class="cookie-btn primary" data-cookie-accept>Akzeptieren</button>
+    </div>
+  </div>
+</div>
+
+<script src="consent.js"></script>
+    
   </body>
 </html>
