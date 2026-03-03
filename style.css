@@ -198,32 +198,46 @@ a{
 }
 
 /* ===== Footer ===== */
-/* full width bar */
 .footer{
   border-top:1px solid var(--border);
   color:var(--muted);
   font-size:14px;
   background:#fff;
-
-  /* IMPORTANT: align content like your main column */
-  text-align:left;
 }
 
-/* inner wrapper that matches .container width/padding */
+/* inner wrapper aligned with main column + one-line layout */
 .footer-inner{
   max-width:920px;
   margin:0 auto;
-  padding:20px 20px;
+  padding:16px 20px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:16px;
 }
 
-.footer p{
-  margin:6px 0;
+/* left side links */
+.footer-left{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+/* keep copyright on one line */
+.footer-right{
+  white-space:nowrap;
 }
 
 .footer a{
+  color:var(--muted);
   text-decoration:none;
 }
 
 .footer a:hover{
   text-decoration:underline;
+}
+
+.separator{
+  color:var(--muted);
 }
