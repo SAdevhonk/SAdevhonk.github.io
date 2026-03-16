@@ -1,248 +1,198 @@
-/* ===== Base ===== */
-:root{
-  --accent:#1f7a4d;      /* green accent */
-  --text:#111827;        /* near-black */
-  --muted:#6b7280;       /* gray */
-  --bg:#ffffff;
-  --border:#e5e7eb;      /* light gray */
-  --activebg:#1f7a4d;    /* active tab bg */
-}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Instacart Market Basket Analysis | Ageel Alramadhan</title>
 
-*{ box-sizing:border-box; }
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="consent.css" />
 
-html, body{
-  height:100%;
-}
+    <!-- Page-only chart styling (MATCHES Citi Bike for consistency) -->
+    <style>
+      .case-image {
+        display: block;
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        margin: 10px auto 6px auto;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        background: #fff;
+      }
 
-body{
-  margin:0;
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
-  color:var(--text);
-  background:var(--bg);
-  line-height:1.6;
+      figure.case-figure {
+        margin: 12px auto 18px auto;
+        text-align: center;
+        max-width: 620px;
+      }
 
-  /* keeps footer at bottom when page is short */
-  display:flex;
-  flex-direction:column;
-  min-height:100vh;
-}
+      figure.case-figure figcaption {
+        font-size: 13px;
+        color: var(--muted);
+        margin-top: 6px;
+      }
 
-main{
-  /* pushes footer down on short pages */
-  flex:1;
-}
+      .insight-block {
+        margin-top: 18px;
+        padding-top: 16px;
+        border-top: 1px solid var(--border);
+      }
 
-/* ===== Layout ===== */
-.container{
-  max-width:920px;
-  margin:0 auto;
-  padding:40px 20px;
-}
+      .insight-block h2 {
+        font-size: 18px;
+        margin: 18px 0 8px 0;
+      }
+    </style>
+  </head>
 
-.card{
-  border:1px solid var(--border);
-  border-radius:14px;
-  padding:18px;
-  background:#fff;
+  <body>
+    <!-- Top Nav -->
+    <header class="nav">
+      <div class="container">
+        <a class="brand" href="index.html">Ageel</a>
 
-  /* IMPORTANT: keep cards consistent width everywhere */
-  width:100%;
-  max-width:100%;
-  display:block;
-}
+        <nav class="navlinks">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a class="active" href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+          <a
+            href="Ageel-Alramadhan-Resume.pdf"
+            target="_blank"
+            rel="noopener"
+            onclick="gtag('event','resume_click',{event_category:'navigation',event_label:'resume_nav'});"
+          >
+            Resume
+          </a>
+        </nav>
+      </div>
+    </header>
 
-/* ===== Top Nav Bar ===== */
-.nav{
-  border-bottom:1px solid var(--border);
-  background:#fff;
-}
+    <!-- Page Content -->
+    <main class="container">
+      <!-- Project Switcher -->
+      <div class="project-switcher">
+        <span class="switcher-link is-active" aria-current="page">Instacart</span>
+        <a class="switcher-link" href="citi-bike-case-study.html">Citi Bike</a>
+        <a class="switcher-link" href="rockbuster-case-study.html">Rockbuster</a>
+      </div>
 
-.nav .container{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:16px;
-  padding-top:14px;
-  padding-bottom:14px;
-}
+      <section class="card">
+        <h1>Instacart Market Basket Analysis</h1>
+        <p class="small">
+          Python • Pandas/NumPy • Behavioral segmentation • Reorder analysis
+        </p>
 
-.brand{
-  font-weight:800;
-  letter-spacing:0.2px;
-  color:var(--text);
-  text-decoration:none;
-}
+        <h3>Project Overview</h3>
+        <p>
+          This project analyzes Instacart customer purchasing behavior to uncover
+          patterns in ordering frequency, product popularity, and customer segmentation.
+          The goal was to translate transaction-level data into actionable business insights.
+        </p>
 
-.navlinks{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-}
+        <h3>Problem</h3>
+        <p>
+          Instacart sought to better understand customer purchasing behavior in order to
+          improve targeted marketing strategies, optimize product placement,
+          and increase repeat purchase rates. The objective was identifying which
+          behavioral patterns drive long-term retention and value.
+        </p>
 
-/* Normal tab */
-.navlinks a{
-  text-decoration:none;
-  color:var(--text);
-  font-weight:600;
-  font-size:14px;
-  padding:8px 12px;
-  border-radius:10px;
-}
+        <h3>Data</h3>
+        <p>
+          The dataset included transactional order data, product information,
+          department categories, and customer-level metrics. Analysis was performed
+          using Python (Pandas, NumPy, Matplotlib) to structure and explore
+          large-scale purchase behavior.
+        </p>
 
-/* Hover tab */
-.navlinks a:hover{
-  background:#f3f4f6;
-}
+        <h3>Process</h3>
+        <ul>
+          <li>Cleaned and validated transactional datasets</li>
+          <li>Analyzed order frequency distribution</li>
+          <li>Examined reorder patterns across departments</li>
+          <li>Segmented customers by behavioral frequency</li>
+          <li>Identified time-based ordering patterns</li>
+        </ul>
 
-/* Active tab */
-.navlinks a.active{
-  background:var(--activebg);
-  color:#ffffff;
-}
+        <h3>Key Insights</h3>
+        <ul>
+          <li>High-frequency customers account for a disproportionate share of total orders</li>
+          <li>Ordering activity is concentrated during predictable daily windows</li>
+          <li>Reorder probability increases with customer tenure and repeat purchases</li>
+          <li>Revenue is structurally tied to repeat behavior rather than customer volume alone</li>
+        </ul>
 
-/* ===== Typography ===== */
-h1{
-  margin:0 0 8px 0;
-  font-size:36px;
-  line-height:1.2;
-}
+        <div class="insight-block">
+          <h2>1) Order Frequency Drives Disproportionate Value</h2>
+          <figure class="case-figure">
+            <img
+              src="instacart-order-frequency.png"
+              alt="Customers by Order Frequency"
+              class="case-image"
+            />
+            <figcaption>
+              A relatively small group of high-frequency customers generates the
+              majority of orders, highlighting the importance of retention and
+              loyalty-focused strategies.
+            </figcaption>
+          </figure>
 
-h2{
-  margin:0 0 20px 0;
-  font-size:18px;
-  color:var(--muted);
-  font-weight:600;
-}
+          <h2>2) Ordering Activity is Time-Concentrated</h2>
+          <figure class="case-figure">
+            <img
+              src="instacart-orders-by-hour.png"
+              alt="Orders by Hour of Day"
+              class="case-image"
+            />
+            <figcaption>
+              Orders peak between late morning and early evening, indicating
+              predictable daily demand cycles that can inform staffing and promotion timing.
+            </figcaption>
+          </figure>
+        </div>
 
-h3{
-  margin:24px 0 10px 0;
-  font-size:18px;
-}
+        <h3>Conclusion</h3>
+        <p>
+          This analysis demonstrates that Instacart’s performance is driven by
+          concentrated behavioral segments rather than evenly distributed demand.
+          By prioritizing high-frequency customers and aligning operations with
+          peak activity windows, the company can improve retention, marketing
+          efficiency, and customer lifetime value.
+        </p>
+      </section>
+    </main>
 
-p{
-  margin:0 0 16px 0;
-  max-width:650px;
-}
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <a href="impressum.html">Impressum</a>
+          <span class="separator">|</span>
+          <a href="datenschutz.html">Datenschutzerklärung</a>
+        </div>
 
-.small{
-  font-size:14px;
-  color:var(--muted);
-}
+        <div class="footer-right">
+          © 2026 Ageel Alramadhan
+        </div>
+      </div>
+    </footer>
 
-/* ===== Links ===== */
-a{
-  color:var(--accent);
-}
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner" style="display:none;">
+      <div class="cookie-inner">
+        <p>
+          Diese Website verwendet Google Analytics, um die Nutzung zu analysieren.
+          Sie können zustimmen oder ablehnen.
+        </p>
+        <div class="cookie-actions">
+          <button class="cookie-btn" data-cookie-reject>Ablehnen</button>
+          <button class="cookie-btn primary" data-cookie-accept>Akzeptieren</button>
+        </div>
+      </div>
+    </div>
 
-/* ===== Button Style (used on homepage / projects) ===== */
-.button{
-  display:inline-block;
-  background:var(--accent);
-  color:#fff;
-  text-decoration:none;
-  font-weight:600;
-  padding:12px 20px;
-  border-radius:8px;
-  margin-top:10px;
-}
-
-.button:hover{
-  opacity:0.9;
-}
-
-/* ===== Responsive ===== */
-@media (max-width:640px){
-  h1{ font-size:28px; }
-}
-
-/* ===== Project Switcher (case study pages) ===== */
-.project-switcher{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  align-items:center;
-  margin:0 0 20px 0;
-}
-
-.switcher-link{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-
-  padding:6px 14px;
-  border-radius:999px;
-
-  font-size:13px;
-  font-weight:600;
-  text-decoration:none;
-
-  color:var(--muted);
-  background:#f9fafb;
-  border:1px solid var(--border);
-
-  transition:all 0.15s ease;
-}
-
-.switcher-link:hover{
-  background:#eef2f7;
-  color:var(--text);
-  border-color:#d1d5db;
-}
-
-.switcher-link.is-active{
-  background:var(--activebg);
-  border-color:var(--activebg);
-  color:#ffffff;
-  cursor:default;
-}
-
-.switcher-link.is-active:hover{
-  background:var(--activebg);
-  border-color:var(--activebg);
-  color:#ffffff;
-}
-
-/* ===== Footer ===== */
-.footer{
-  border-top:1px solid var(--border);
-  color:var(--muted);
-  font-size:14px;
-  background:#fff;
-}
-
-/* inner wrapper aligned with main column + one-line layout */
-.footer-inner{
-  max-width:920px;
-  margin:0 auto;
-  padding:16px 20px;
-
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:16px;
-}
-
-/* left side links */
-.footer-left{
-  display:flex;
-  align-items:center;
-  gap:8px;
-}
-
-/* keep copyright on one line */
-.footer-right{
-  white-space:nowrap;
-}
-
-.footer a{
-  color:var(--muted);
-  text-decoration:none;
-}
-
-.footer a:hover{
-  text-decoration:underline;
-}
-
-.separator{
-  color:var(--muted);
-}
+    <script src="consent.js"></script>
+  </body>
+</html>
