@@ -382,7 +382,7 @@ html, body {
 }
 
 .case-content .tools-badge {
-  font-size: 14px;
+  font-size: 15px;
   font-family: var(--font-mono);
   color: var(--muted);
   margin-bottom: 24px;

@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Globales Glück & Wirtschaftsfaktoren (2019) | Ageel Alramadhan</title>
+  <meta name="description" content="Korrelations- und Regressionsanalyse des World Happiness Report 2019 über 156 Länder." />
+  <meta name="author" content="Ageel Alramadhan" />
+  <meta property="og:title" content="Globales Glück & Wirtschaftsfaktoren (2019) | Ageel Alramadhan" />
+  <meta property="og:description" content="Korrelations- und Regressionsanalyse des World Happiness Report 2019 über 156 Länder." />
+  <meta property="og:url" content="https://ageelalramadhan.github.io/happiness-case-study-de.html" />
+  <meta property="og:image" content="https://ageelalramadhan.github.io/og-image.png" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="consent.css" />
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <a href="index-de.html" class="brand-name">Ageel Alramadhan</a>
+      <span class="brand-role">data_analyst.portfolio</span>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Navigation</div>
+      <a href="index-de.html" class="sidebar-link">
+        <svg class="icon" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1L1 6v9h5V10h4v5h5V6L8 1z"/></svg>
+        Übersicht
+      </a>
+      <a href="about-de.html" class="sidebar-link">
+        <svg class="icon" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="5" r="3"/><path d="M2 14c0-3.3 2.7-6 6-6s6 2.7 6 6"/></svg>
+        Über mich
+      </a>
+      <a href="projects-de.html" class="sidebar-link active">
+        <svg class="icon" viewBox="0 0 16 16" fill="currentColor"><rect x="1" y="3" width="14" height="10" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M5 7h6M5 10h4"/></svg>
+        Projekte
+      </a>
+      <a href="contact-de.html" class="sidebar-link">
+        <svg class="icon" viewBox="0 0 16 16" fill="currentColor"><path d="M2 3h12a1 1 0 011 1v8a1 1 0 01-1 1H2a1 1 0 01-1-1V4a1 1 0 011-1zm6 5l6-4H2l6 4z"/></svg>
+        Kontakt
+      </a>
+    </div>
+    <div class="sidebar-footer">
+      <a href="Ageel-Alramadhan-Lebenslauf.pdf" target="_blank" rel="noopener noreferrer"
+        onclick="gtag('event','resume_click',{event_category:'navigation',event_label:'sidebar_de'});">↓ Lebenslauf (PDF)</a>
+      <a href="https://linkedin.com/in/ageel-alramadhan" target="_blank" rel="noopener noreferrer">LinkedIn →</a>
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutzerklärung</a>
+    </div>
+  </aside>
+  <div class="main">
+    <header class="mobile-header">
+      <a href="index-de.html" class="mobile-brand">Ageel</a>
+      <button class="nav-toggle" aria-label="Navigation umschalten" onclick="document.getElementById('sidebar').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+    <div class="page-header">
+      <div>
+        <div class="page-title">Globales Glück & Wirtschaftsfaktoren (2019)</div>
+        <div class="page-subtitle">Python · Scipy · Tableau · Korrelationsanalyse</div>
+      </div>
+      <div class="header-actions"><a href="happiness-case-study.html" class="button-outline" style="font-size:14px;padding:7px 16px;">🇬🇧 English</a></div>
+    </div>
+    <div class="content">
+      <nav class="project-switcher" aria-label="Projektnavigation">
+        <a class="switcher-link" href="instacart-case-study-de.html">Instacart</a>
+        <a class="switcher-link" href="citi-bike-case-study-de.html">Citi Bike</a>
+        <a class="switcher-link" href="rockbuster-case-study-de.html">Rockbuster</a>
+        <a class="switcher-link" href="influenza-case-study-de.html">Influenza</a>
+        <span class="switcher-link is-active" aria-current="page">Happiness</span>
+        <a class="switcher-link" href="textmining-case-study-de.html">Text Mining</a>
+      </nav>
+      <div class="panel">
+        <div class="panel-body case-content">
+
+          <h3>Projektübersicht</h3>
+          <p>Dieses Projekt untersucht anhand des World Happiness Report 2019, was das berichtete Glück in verschiedenen Ländern antreibt — mit Fokus auf wirtschaftliche und soziale Indikatoren und deren Beziehung zu Glückswerten.</p>
+
+          <h3>Zentrale Frage</h3>
+          <p>Ist das BIP der wichtigste Treiber nationalen Glücks — oder spielen soziale Faktoren eine ebenso wichtige oder stärkere Rolle? Die Antwort hat reale Implikationen für die politische Prioritätensetzung.</p>
+
+          <h3>Methoden</h3>
+          <ul>
+            <li>Explorative Datenanalyse (EDA) in Python — Verteilungen, Ausreißer, fehlende Werte</li>
+            <li>Streudiagramme zur Bewertung von Beziehungen zwischen Glück und Indikatoren</li>
+            <li>Pearson-Korrelationsanalyse zur Quantifizierung der Beziehungsstärke</li>
+            <li>Lineare Regression zur Trenduntersuchung</li>
+            <li>Tableau für interaktive Weltkarte und Streudiagramme</li>
+          </ul>
+
+          <h3>Zentrale Erkenntnisse</h3>
+          <ul>
+            <li>BIP pro Kopf zeigt eine klare positive Beziehung zum Glück</li>
+            <li>Soziale Unterstützung zeigte eine <em>stärkere und konsistentere</em> Beziehung als das BIP</li>
+            <li>Länder mit ähnlichem Einkommensniveau unterschieden sich erheblich im Glück, wenn die soziale Unterstützung variierte</li>
+            <li>Wirtschaftliche Faktoren allein reichen nicht aus, um Wohlbefinden zu erklären</li>
+          </ul>
+
+          <div class="insight-block">
+            <h2>Globale Glücksübersicht</h2>
+            <figure class="case-figure">
+              <img src="happiness-tableau-map.png" alt="Weltkarte der Glückswerte 2019" class="case-image" />
+              <figcaption>Die Weltkarte zeigt Glückswerte nach Land. Nordeuropa, Nordamerika und Australien erzielen die höchsten Werte, Sub-Sahara-Afrika und Südasien die niedrigsten.</figcaption>
+            </figure>
+            <p style="margin-top:16px;">
+              <a href="https://public.tableau.com/app/profile/a.a5244/viz/Achievement6HappinessEconomicFactors/GlobalOverviewofHappiness2019"
+                target="_blank" rel="noopener noreferrer" class="button">
+                Interaktives Dashboard auf Tableau ansehen →
+              </a>
+            </p>
+          </div>
+
+          <h3>Fazit</h3>
+          <p>Wirtschaftlicher Wohlstand ist wichtig für Glück, aber nicht ausreichend. Soziale Unterstützung — Menschen zu haben, auf die man sich verlassen kann — zeigt eine ebenso starke oder stärkere Beziehung zum berichteten Wohlbefinden. Effektive Politik muss daher sowohl wirtschaftliche als auch soziale Dimensionen adressieren.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="cookie-banner" class="cookie-banner" style="display:none;">
+  <div class="cookie-inner">
+    <p>Diese Website verwendet Google Analytics. Sie können zustimmen oder ablehnen.</p>
+    <div class="cookie-actions">
+      <button class="cookie-btn" data-cookie-reject>Ablehnen</button>
+      <button class="cookie-btn primary" data-cookie-accept>Akzeptieren</button>
+    </div>
+  </div>
+</div>
+<script src="consent.js"></script>
+</body>
+</html>
