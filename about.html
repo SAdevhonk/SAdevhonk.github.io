@@ -8,6 +8,7 @@
   <meta name="author" content="Ageel Alramadhan" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="About | Ageel Alramadhan" />
+  <meta property="og:description" content="Data Analyst with a background in performance marketing, specializing in Python, SQL, Tableau, and NLP." />
   <meta property="og:url" content="https://ageelalramadhan.github.io/about.html" />
   <meta property="og:image" content="https://ageelalramadhan.github.io/og-image.png" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
@@ -16,20 +17,33 @@
 </head>
 <body>
 <div class="layout">
-  <aside class="sidebar" id="sidebar">
+    <aside class="sidebar" id="sidebar">
     <div class="sidebar-brand">
       <a href="index.html" class="brand-name">Ageel Alramadhan</a>
       <span class="brand-role">data_analyst.portfolio</span>
     </div>
     <div class="sidebar-section">
       <div class="sidebar-section-label">Navigation</div>
-      <a href="index.html" class="sidebar-link"><svg class="icon" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1L1 6v9h5V10h4v5h5V6L8 1z"/></svg>Overview</a>
-      <a href="about.html" class="sidebar-link active"><svg class="icon" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="5" r="3"/><path d="M2 14c0-3.3 2.7-6 6-6s6 2.7 6 6"/></svg>About</a>
-      <a href="projects.html" class="sidebar-link"><svg class="icon" viewBox="0 0 16 16" fill="currentColor"><rect x="1" y="3" width="14" height="10" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M5 7h6M5 10h4"/></svg>Projects</a>
-      <a href="contact.html" class="sidebar-link"><svg class="icon" viewBox="0 0 16 16" fill="currentColor"><path d="M2 3h12a1 1 0 011 1v8a1 1 0 01-1 1H2a1 1 0 01-1-1V4a1 1 0 011-1zm6 5l6-4H2l6 4z"/></svg>Contact</a>
+      <a href="index.html" class="sidebar-link">
+        <svg class="icon" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1L1 6v9h5V10h4v5h5V6L8 1z"/></svg>
+        Overview
+      </a>
+      <a href="about.html" class="sidebar-link active">
+        <svg class="icon" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="5" r="3"/><path d="M2 14c0-3.3 2.7-6 6-6s6 2.7 6 6"/></svg>
+        About
+      </a>
+      <a href="projects.html" class="sidebar-link">
+        <svg class="icon" viewBox="0 0 16 16" fill="currentColor"><rect x="1" y="3" width="14" height="10" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M5 7h6M5 10h4"/></svg>
+        Projects
+      </a>
+      <a href="contact.html" class="sidebar-link">
+        <svg class="icon" viewBox="0 0 16 16" fill="currentColor"><path d="M2 3h12a1 1 0 011 1v8a1 1 0 01-1 1H2a1 1 0 01-1-1V4a1 1 0 011-1zm6 5l6-4H2l6 4z"/></svg>
+        Contact
+      </a>
     </div>
     <div class="sidebar-footer">
-      <a href="Ageel-Alramadhan-Resume.pdf" target="_blank" rel="noopener noreferrer">↓ Resume (PDF)</a>
+      <a href="Ageel-Alramadhan-Resume.pdf" target="_blank" rel="noopener noreferrer"
+        onclick="gtag('event','resume_click',{event_category:'navigation',event_label:'sidebar'});">↓ Resume (PDF)</a>
       <a href="https://linkedin.com/in/ageel-alramadhan" target="_blank" rel="noopener noreferrer">LinkedIn →</a>
       <a href="impressum.html">Impressum</a>
       <a href="datenschutz.html">Datenschutzerklärung</a>
@@ -38,23 +52,37 @@
   <div class="main">
     <header class="mobile-header">
       <a href="index.html" class="mobile-brand">Ageel</a>
-      <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.getElementById('sidebar').classList.toggle('open')"><span></span><span></span><span></span></button>
+      <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.getElementById('sidebar').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
     </header>
     <div class="page-header">
-      <div><div class="page-title">About</div><div class="page-subtitle">background · skills · tools</div></div>
-      <div class="header-actions">
-        <a href="about-de.html" class="button-outline" style="font-size:14px;padding:7px 16px;">🇩🇪 Deutsch</a>
+      <div>
+        <div class="page-title">About</div>
+        <div class="page-subtitle">background · skills · tools</div>
+              <a href="about-de.html" class="button-outline" style="font-size:14px;padding:7px 16px;">🇩🇪 Deutsch</a>
       </div>
     </div>
     <div class="content">
-      <div class="panel"><div class="panel-header"><span class="panel-title">Profile</span></div>
+
+      <div class="panel">
+        <div class="panel-header"><span class="panel-title">Profile</span></div>
         <div class="panel-body">
-          <p style="font-size:16px;color:#374151;max-width:680px;line-height:1.8;margin-bottom:12px;">I'm a Data Analyst with a background in performance marketing. I transitioned into data analytics because I enjoy investigating why performance changes, validating assumptions, and turning messy metrics into clear, decision-ready insights.</p>
-          <p style="font-size:16px;color:#374151;max-width:680px;line-height:1.8;">I bring a performance-driven mindset to analysis, combining marketing context with structured analytics to deliver measurable business impact. My work focuses on growth, customer behavior, and KPI movement.</p>
+          <p style="font-size:14px;color:#374151;max-width:620px;line-height:1.75;margin-bottom:12px;">
+            I'm a Data Analyst with a background in performance marketing. I transitioned into data analytics
+            because I enjoy investigating why performance changes, validating assumptions, and turning messy
+            metrics into clear, decision-ready insights.
+          </p>
+          <p style="font-size:14px;color:#374151;max-width:620px;line-height:1.75;">
+            I bring a performance-driven mindset to analysis, combining marketing context with structured analytics
+            to deliver measurable business impact. My work focuses on growth, customer behavior, and KPI movement.
+          </p>
         </div>
       </div>
+
       <div class="about-grid">
-        <div class="panel"><div class="panel-header"><span class="panel-title">Core Tools</span></div>
+        <div class="panel">
+          <div class="panel-header"><span class="panel-title">Core Tools</span></div>
           <div class="panel-body" style="padding:0 20px;">
             <ul class="skill-list">
               <li>Python (Pandas, NumPy, Matplotlib) <span class="skill-level">Advanced</span></li>
@@ -64,24 +92,40 @@
               <li>spaCy / NLTK / NLP <span class="skill-level">Intermediate</span></li>
               <li>Selenium / Web Scraping <span class="skill-level">Intermediate</span></li>
               <li>Streamlit / Plotly <span class="skill-level">Intermediate</span></li>
-              <li>Google Analytics 4 / GTM <span class="skill-level">Intermediate</span></li>
             </ul>
           </div>
         </div>
-        <div class="panel"><div class="panel-header"><span class="panel-title">Project Areas</span></div>
+
+        <div class="panel">
+          <div class="panel-header"><span class="panel-title">Project Areas</span></div>
           <div class="panel-body" style="padding:0 20px;">
             <ul class="skill-list">
               <li>Behavioral Segmentation <span class="skill-level">✓</span></li>
               <li>Time-Series Analysis <span class="skill-level">✓</span></li>
               <li>Geospatial Visualization <span class="skill-level">✓</span></li>
-              <li>Text Mining &amp; NLP <span class="skill-level">✓</span></li>
+              <li>Text Mining & NLP <span class="skill-level">✓</span></li>
               <li>Network Graph Analysis <span class="skill-level">✓</span></li>
               <li>Statistical Comparison <span class="skill-level">✓</span></li>
-              <li>Revenue &amp; Market Analysis <span class="skill-level">✓</span></li>
+              <li>Revenue & Market Analysis <span class="skill-level">✓</span></li>
             </ul>
           </div>
         </div>
       </div>
+
+      <div class="panel">
+        <div class="panel-header"><span class="panel-title">Projects</span></div>
+        <div class="panel-body">
+          <p style="font-size:14px;color:#374151;margin-bottom:16px;">
+            Each project links tools to real analytical decisions —
+            see the work in the <a href="projects.html" style="color:var(--accent);">Projects</a> section.
+          </p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;">
+            <a href="projects.html" class="button">View All Projects</a>
+            <a href="contact.html" class="button-outline">Get in Touch</a>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>

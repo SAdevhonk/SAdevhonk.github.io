@@ -4,10 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ageel Alramadhan | Data Analyst</title>
-  <meta name="description" content="Ageel Alramadhan — Data Analyst specializing in SQL, Python, Tableau, and NLP." />
+  <meta name="description" content="Ageel Alramadhan — Data Analyst specializing in SQL, Python, Tableau, and NLP. View portfolio projects and case studies." />
   <meta name="author" content="Ageel Alramadhan" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Ageel Alramadhan | Data Analyst" />
+  <meta property="og:description" content="Data Analyst specializing in SQL, Python, Tableau, and NLP. View portfolio projects and case studies." />
   <meta property="og:url" content="https://ageelalramadhan.github.io/" />
   <meta property="og:image" content="https://ageelalramadhan.github.io/og-image.png" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
@@ -16,7 +17,9 @@
 </head>
 <body>
 <div class="layout">
-  <aside class="sidebar" id="sidebar">
+
+  <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
     <div class="sidebar-brand">
       <a href="index.html" class="brand-name">Ageel Alramadhan</a>
       <span class="brand-role">data_analyst.portfolio</span>
@@ -41,12 +44,15 @@
       </a>
     </div>
     <div class="sidebar-footer">
-      <a href="Ageel-Alramadhan-Resume.pdf" target="_blank" rel="noopener noreferrer">↓ Resume (PDF)</a>
+      <a href="Ageel-Alramadhan-Resume.pdf" target="_blank" rel="noopener noreferrer"
+        onclick="gtag('event','resume_click',{event_category:'navigation',event_label:'sidebar'});">↓ Resume (PDF)</a>
       <a href="https://linkedin.com/in/ageel-alramadhan" target="_blank" rel="noopener noreferrer">LinkedIn →</a>
       <a href="impressum.html">Impressum</a>
       <a href="datenschutz.html">Datenschutzerklärung</a>
     </div>
   </aside>
+
+  <!-- Main -->
   <div class="main">
     <header class="mobile-header">
       <a href="index.html" class="mobile-brand">Ageel</a>
@@ -54,17 +60,24 @@
         <span></span><span></span><span></span>
       </button>
     </header>
+
     <div class="page-header">
       <div>
         <div class="page-title">Overview</div>
         <div class="page-subtitle">ageel.alramadhan // data analyst</div>
       </div>
       <div class="header-actions">
-        <a href="Ageel-Alramadhan-Resume.pdf" target="_blank" rel="noopener noreferrer" class="button-outline">Resume</a>
+        <a href="Ageel-Alramadhan-Resume.pdf" target="_blank" rel="noopener noreferrer" class="button-outline"
+          onclick="gtag('event','resume_click',{event_category:'navigation',event_label:'header'});">
+          Resume
+        </a>
         <a href="index-de.html" class="button-outline" style="font-size:14px;padding:7px 16px;">🇩🇪 Deutsch</a>
       </div>
     </div>
+
     <div class="content">
+
+      <!-- KPI Row -->
       <div class="metrics-row">
         <div class="metric-card dark">
           <div class="metric-label">Projects</div>
@@ -87,38 +100,49 @@
           <div class="metric-sub">to opportunities</div>
         </div>
       </div>
+
+      <!-- About panel -->
       <div class="panel">
-        <div class="panel-header"><span class="panel-title">Profile</span></div>
+        <div class="panel-header">
+          <span class="panel-title">Profile</span>
+        </div>
         <div class="panel-body">
-          <p style="font-size:16px;color:#374151;max-width:680px;line-height:1.8;margin-bottom:12px;">
+          <p style="font-size:14px;color:#374151;max-width:620px;line-height:1.75;margin-bottom:16px;">
             Hi, I'm Ageel — a Data Analyst with a background in performance marketing.
             I transitioned into analytics because I enjoy investigating why performance changes,
             challenging assumptions, and turning messy datasets into decision-ready insights.
           </p>
-          <p style="font-size:16px;color:#374151;max-width:680px;line-height:1.8;">
+          <p style="font-size:14px;color:#374151;max-width:620px;line-height:1.75;margin-bottom:20px;">
             My work spans behavioral segmentation, time-series analysis, SQL querying,
             NLP text mining, and Tableau dashboarding — always with a focus on
             translating data patterns into measurable business actions.
           </p>
+
         </div>
       </div>
+
+      <!-- Featured projects panel -->
       <div class="panel">
         <div class="panel-header">
           <span class="panel-title">Featured Projects</span>
-          <a href="projects.html" style="font-size:14px;color:var(--accent);font-family:var(--font-mono);text-decoration:none;">view all →</a>
+          <a href="projects.html" style="font-size:12px;color:var(--accent);font-family:var(--font-mono);text-decoration:none;">view all →</a>
         </div>
         <div class="panel-body" style="padding:16px;">
           <div class="projects-grid">
-            <a href="textmining-case-study.html" class="project-card">
+
+            <a href="textmining-case-study.html" class="project-card"
+              onclick="gtag('event','case_study_click',{event_category:'homepage',event_label:'textmining'});">
               <div class="project-card-header">
-                <div class="project-card-title">20th Century Text Mining &amp; NLP</div>
+                <div class="project-card-title">20th Century Text Mining & NLP</div>
                 <span class="project-tag">Advanced</span>
               </div>
               <div class="project-card-tools">Python · spaCy · NLTK · Selenium · NetworkX</div>
               <div class="project-card-desc">Web scraping, NER entity extraction, and network graph visualization of geopolitical co-occurrence patterns.</div>
               <div class="project-card-link">View case study →</div>
             </a>
-            <a href="instacart-case-study.html" class="project-card">
+
+            <a href="instacart-case-study.html" class="project-card"
+              onclick="gtag('event','case_study_click',{event_category:'homepage',event_label:'instacart'});">
               <div class="project-card-header">
                 <div class="project-card-title">Instacart Market Basket Analysis</div>
                 <span class="project-tag">Python</span>
@@ -127,7 +151,9 @@
               <div class="project-card-desc">Behavioral segmentation revealing that high-frequency customers drive a disproportionate share of total orders.</div>
               <div class="project-card-link">View case study →</div>
             </a>
-            <a href="rockbuster-case-study.html" class="project-card">
+
+            <a href="rockbuster-case-study.html" class="project-card"
+              onclick="gtag('event','case_study_click',{event_category:'homepage',event_label:'rockbuster'});">
               <div class="project-card-header">
                 <div class="project-card-title">Rockbuster Strategy Analysis</div>
                 <span class="project-tag">SQL</span>
@@ -136,12 +162,15 @@
               <div class="project-card-desc">Multi-table SQL joins to identify geographic revenue concentration and high-value customer segments.</div>
               <div class="project-card-link">View case study →</div>
             </a>
+
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
+
+    </div><!-- /content -->
+  </div><!-- /main -->
+</div><!-- /layout -->
+
 <div id="cookie-banner" class="cookie-banner" style="display:none;">
   <div class="cookie-inner">
     <p>Diese Website verwendet Google Analytics. Sie können zustimmen oder ablehnen.</p>

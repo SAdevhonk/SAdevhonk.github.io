@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Global Happiness & Economic Factors (2019) | Ageel Alramadhan</title>
+  <meta name="description" content="Correlation and regression analysis of 2019 World Happiness Report across 156 countries." />
+  <meta name="author" content="Ageel Alramadhan" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Global Happiness & Economic Factors (2019) | Ageel Alramadhan" />
+  <meta property="og:description" content="Correlation and regression analysis of 2019 World Happiness Report across 156 countries." />
+  <meta property="og:url" content="https://ageelalramadhan.github.io/happiness-case-study.html" />
+  <meta property="og:image" content="https://ageelalramadhan.github.io/og-image.png" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="consent.css" />
+</head>
+<body>
+<div class="layout">
+    <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <a href="index.html" class="brand-name">Ageel Alramadhan</a>
+      <span class="brand-role">data_analyst.portfolio</span>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Navigation</div>
+      <a href="index.html" class="sidebar-link">
+        <svg class="icon" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1L1 6v9h5V10h4v5h5V6L8 1z"/></svg>
+        Overview
+      </a>
+      <a href="about.html" class="sidebar-link">
+        <svg class="icon" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="5" r="3"/><path d="M2 14c0-3.3 2.7-6 6-6s6 2.7 6 6"/></svg>
+        About
+      </a>
+      <a href="projects.html" class="sidebar-link active">
+        <svg class="icon" viewBox="0 0 16 16" fill="currentColor"><rect x="1" y="3" width="14" height="10" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M5 7h6M5 10h4"/></svg>
+        Projects
+      </a>
+      <a href="contact.html" class="sidebar-link">
+        <svg class="icon" viewBox="0 0 16 16" fill="currentColor"><path d="M2 3h12a1 1 0 011 1v8a1 1 0 01-1 1H2a1 1 0 01-1-1V4a1 1 0 011-1zm6 5l6-4H2l6 4z"/></svg>
+        Contact
+      </a>
+    </div>
+    <div class="sidebar-footer">
+      <a href="Ageel-Alramadhan-Resume.pdf" target="_blank" rel="noopener noreferrer"
+        onclick="gtag('event','resume_click',{event_category:'navigation',event_label:'sidebar'});">↓ Resume (PDF)</a>
+      <a href="https://linkedin.com/in/ageel-alramadhan" target="_blank" rel="noopener noreferrer">LinkedIn →</a>
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutzerklärung</a>
+    </div>
+  </aside>
+  <div class="main">
+    <header class="mobile-header">
+      <a href="index.html" class="mobile-brand">Ageel</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.getElementById('sidebar').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+    <div class="page-header">
+      <div>
+        <div class="page-title">Global Happiness & Economic Factors (2019)</div>
+        <div class="page-subtitle">Python · Scipy · Tableau · Correlation Analysis</div>
+              <a href="happiness-case-study-de.html" class="button-outline" style="font-size:14px;padding:7px 16px;">🇩🇪 Deutsch</a>
+      </div>
+    </div>
+    <div class="content">
+      <nav class="project-switcher" aria-label="Project switcher">
+        <a class="switcher-link" href="instacart-case-study.html">Instacart</a>
+        <a class="switcher-link" href="citi-bike-case-study.html">Citi Bike</a>
+        <a class="switcher-link" href="rockbuster-case-study.html">Rockbuster</a>
+        <a class="switcher-link" href="influenza-case-study.html">Influenza</a>
+        <span class="switcher-link is-active" aria-current="page">Happiness</span>
+        <a class="switcher-link" href="textmining-case-study.html">Text Mining</a>
+      </nav>
+      <div class="panel">
+        <div class="panel-body case-content">
+<h1>Global Happiness & Economic Factors (2019)</h1>
+        <p class="small">Python • Pandas • Matplotlib • Scipy • Tableau • Correlation analysis • Linear regression</p>
+
+        <h3>Project Overview</h3>
+        <p>This project explores what drives reported happiness across countries using the
+          2019 World Happiness Report. The analysis examines how economic and social indicators
+          relate to happiness scores, with a focus on identifying which factors show the strongest
+          and most consistent relationships at a global level.</p>
+
+        <h3>Key Question</h3>
+        <p>Is GDP the primary driver of national happiness — or do social factors play an equally
+          important or stronger role? The answer has real implications for how governments prioritize
+          policy.</p>
+
+        <h3>Data</h3>
+        <p>The 2019 World Happiness Report contains one observation per country (156 countries total),
+          with happiness scores derived from the Gallup World Poll alongside six contributing factors:
+          GDP per capita, social support, healthy life expectancy, freedom, generosity, and
+          perceptions of corruption.</p>
+
+        <h3>Methods</h3>
+        <ul>
+          <li>Exploratory data analysis (EDA) in Python — distributions, outliers, missing values</li>
+          <li>Scatter plots to assess relationships between happiness and each indicator</li>
+          <li>Pearson correlation analysis to quantify relationship strength</li>
+          <li>Linear regression for trend inspection (not prediction)</li>
+          <li>K-means clustering — tested but de-emphasized due to limited explanatory value</li>
+          <li>Tableau for interactive world choropleth map and scatter plot visualizations</li>
+        </ul>
+
+        <h3>Key Findings</h3>
+        <ul>
+          <li>GDP per capita shows a clear positive relationship with happiness — wealthier countries are generally happier</li>
+          <li>Social support showed a <em>stronger and more consistent</em> relationship with happiness than GDP alone</li>
+          <li>Countries with similar income levels differed significantly in happiness when social support varied — income doesn't fully explain wellbeing</li>
+          <li>Economic factors alone are insufficient to explain happiness; social conditions play a major role alongside income</li>
+        </ul>
+
+        <div class="insight-block">
+          <h2>Global happiness overview</h2>
+          <figure class="case-figure">
+            <img src="happiness-tableau-map.png" alt="World choropleth map of happiness scores 2019" class="case-image" />
+            <figcaption>The world choropleth map shows happiness scores by country. Northern Europe, North America,
+              and Australasia score highest (dark blue), while Sub-Saharan Africa and South Asia score lowest (light blue/grey).</figcaption>
+          </figure>
+
+          <p style="margin-top: 16px;">
+            <a href="https://public.tableau.com/app/profile/a.a5244/viz/Achievement6HappinessEconomicFactors/GlobalOverviewofHappiness2019"
+              target="_blank" rel="noopener noreferrer"
+              class="button"
+              onclick="gtag('event','tableau_click',{event_category:'projects',event_label:'happiness'});">
+              View Interactive Dashboard on Tableau →
+            </a>
+          </p>
+        </div>
+
+        <h3>Analytical Decision</h3>
+        <p>The analysis initially compared GDP, social support, health, freedom, generosity, and corruption
+          against happiness. GDP was examined first as a baseline — it shows a clear positive trend.
+          However, social support emerged as the more consistent predictor: countries at similar income
+          levels diverged significantly in happiness when social support differed. This shaped the
+          final narrative focus on GDP and social support as the two most policy-relevant factors.</p>
+
+        <h3>Limitations</h3>
+        <ul>
+          <li>Single-year snapshot — trends over time are not captured</li>
+          <li>Happiness scores are self-reported and may reflect cultural response biases</li>
+          <li>Correlations are observational — causation cannot be determined</li>
+        </ul>
+
+        <h3>Conclusion</h3>
+        <p>Economic prosperity matters for happiness, but it is not sufficient. Social support —
+          having people to count on — shows an equally strong or stronger relationship with reported
+          wellbeing. This suggests that effective policy needs to address both economic and social
+          dimensions, and that income growth alone is unlikely to maximize national happiness.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="cookie-banner" class="cookie-banner" style="display:none;">
+  <div class="cookie-inner">
+    <p>Diese Website verwendet Google Analytics. Sie können zustimmen oder ablehnen.</p>
+    <div class="cookie-actions">
+      <button class="cookie-btn" data-cookie-reject>Ablehnen</button>
+      <button class="cookie-btn primary" data-cookie-accept>Akzeptieren</button>
+    </div>
+  </div>
+</div>
+<script src="consent.js"></script>
+</body>
+</html>
